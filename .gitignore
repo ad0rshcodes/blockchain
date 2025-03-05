@@ -1,0 +1,4 @@
+.DS_Store
+.jqwik-database
+.vscode/
+target/
