@@ -146,6 +146,7 @@ public class Block {
      */
     public String toString() {
         return String.format("Block %d (Amount: %d, Nonce: %d, prevHash: %s, hash: %s)",
-                num, amount, nonce, prevHash == null ? "null" : prevHash.toString(), hash.toString());
+                num, amount, nonce,
+                prevHash == null ? "null" : prevHash.toString(), hash.toString());
     }
 }
