@@ -3,7 +3,17 @@ package edu.grinnell.csc207.blockchain;
 import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
+/**
+ * BlockChainDriver Class
+ */
 public class BlockChainDriver {
+
+    /**
+     * The main method runs the command-line blockchain interface.
+     *
+     * @param args Command-line arguments, where the first argument is the initial
+     *             amount for the blockchain.
+     */
     public static void main(String[] args) {
         if (args.length != 1) {
             System.err.println("Usage: java BlockChainDriver <initial_amount>");
@@ -13,8 +23,9 @@ public class BlockChainDriver {
         int initial;
         try {
             initial = Integer.parseInt(args[0]);
-            if (initial < 0)
+            if (initial < 0) {
                 throw new NumberFormatException();
+            }
         } catch (NumberFormatException e) {
             System.err.println("Initial amount must be a non-negative integer");
             return;
@@ -35,7 +46,8 @@ public class BlockChainDriver {
                         System.out.print("Amount transferred? ");
                         int amount = Integer.parseInt(scanner.nextLine());
                         candidate = chain.mine(amount);
-                        System.out.printf("amount = %d, nonce = %d%n", amount, candidate.getNonce());
+                        System.out.printf("amount = %d, nonce = %d%n",
+                                amount, candidate.getNonce());
                         break;
 
                     case "append":
@@ -47,7 +59,8 @@ public class BlockChainDriver {
                         int appendAmount = Integer.parseInt(scanner.nextLine());
                         System.out.print("Nonce? ");
                         long nonce = Long.parseLong(scanner.nextLine());
-                        Block toAppend = new Block(chain.getSize(), appendAmount, chain.getHash(), nonce);
+                        Block toAppend = new Block(chain.getSize(),
+                                appendAmount, chain.getHash(), nonce);
                         try {
                             chain.append(toAppend);
                             candidate = null; // Reset after successful append
@@ -63,7 +76,9 @@ public class BlockChainDriver {
                         break;
 
                     case "check":
-                        System.out.println(chain.isValidBlockChain() ? "Chain is valid!" : "Chain is invalid!");
+                        System.out.println(chain.isValidBlockChain()
+                                ? "Chain is valid!"
+                                : "Chain is invalid!");
                         break;
 
                     case "report":
