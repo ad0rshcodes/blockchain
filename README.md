@@ -4,8 +4,15 @@ Authors: _Adarsh Sharma_
 
 ## Resources
 
-- [Introduction to Hashing](https://www.geeksforgeeks.org/introduction-to-hashing-2/)
-- [Oracle: ByteBuffer](https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html)
+## Resources
+
+1. [TTAP: Data Structures - Lab Manual](https://osera.cs.grinnell.edu/ttap/data-structures-labs/the-worlds-best-internship.html)
+2. [TTAP: Data Structures](https://osera.cs.grinnell.edu/ttap/data-structures/)
+3. VSCode Version: 1.99.1 (Universal)
+4. java 21.0.1 2023-10-17 LTS 6.
+5. [GitHub](https://github.com)
+6. [Introduction to Hashing](https://www.geeksforgeeks.org/introduction-to-hashing-2/)
+7. [Oracle: ByteBuffer](https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html)
 
 ## Git Log
 
